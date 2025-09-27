@@ -1,19 +1,23 @@
-
 // ###-------- Constructors --------###
-//It is the first function that is run when your object is created.
+
+// A constructor is a special method that is called when an object is created.
+// It is used to initialize the object's properties.
 
 class Mathematics {
   int n1 = 7;
   int n2 = 7;
 
-// Constructor has same name as the Class
-//Sudo: You can't have parameter and default constructor inside the same class.
-  Mathematics(int n1, int n2) { // This is my parametarise constructor function
-    print("Object is created");
-    this.n1 = n1; // This accesses the current class I'm in
+  // This is a parameterized constructor.
+  // It takes two integer parameters and initializes the n1 and n2 properties.
+  // The `this` keyword is used to refer to the current instance of the class.
+  Mathematics(int n1, int n2) {
+    print("Object is created with parameterized constructor");
+    this.n1 = n1;
     this.n2 = n2;
   }
 
+  // This is a named constructor.
+  // Named constructors are used to create multiple constructors for a class.
   Mathematics.NamedConstructor() {
     print("This is my named constructor");
   }
@@ -23,7 +27,7 @@ class Mathematics {
   }
 
   int subtraction() {
-    return n1 - n2; //Still works without specifying current class variables n1 and n2
+    return n1 - n2; // `this` is optional here
   }
 
   int multiplition() {
@@ -36,7 +40,8 @@ class Mathematics {
 }
 
 void main() {
-  Mathematics mathematics = Mathematics.NamedConstructor(); //Constructor Function
+  // Creating an object using the named constructor.
+  Mathematics mathematics = Mathematics.NamedConstructor();
 
   int addResult = mathematics.addition();
   int subResult = mathematics.subtraction();
@@ -48,6 +53,7 @@ void main() {
   print("Division: \$divResult");
   print("Multiplication: \$multResult");
 
+  // Creating an object using the parameterized constructor.
   Mathematics mathematics2 = Mathematics(10, 5);
-  print("Addition2: \${mathematics2.addition()}");
+  print("\nAddition2: \${mathematics2.addition()}");
 }

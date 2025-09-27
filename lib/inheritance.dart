@@ -1,43 +1,22 @@
-
 // ###-------- Inheritance in Dart --------###
-// Inheritance is the act of a subclass/child having same properties as that of the base/parent class.
-//We use the extends keyword to inherit a property.
-//When one parent has two or more children, hierarchial inheritance is created.
 
-/*
-- Hierarchial Inheritance
-Mobile Phone extends Electronics - calls(), games()
-Television extends Electronics -
-Electronics - height, width, thickness, aspectRatio, watch()
+// Inheritance is a mechanism in which one class acquires the properties (methods and fields) of another class.
+// The class that inherits the properties is called the subclass or child class.
+// The class whose properties are inherited is called the superclass or parent class.
+// We use the `extends` keyword to inherit a property.
 
-- Single Inheritance
-Mobile Phone extends Electronics - calls(), games()
-Electronics - height, width, thickness, aspectRatio, watch()
+// ### Types of Inheritance ###
 
-- Multilevel Inheritance
-Mobile Phone extends Electronics - calls(), games()
-Television extends Electronics -
-Electronics - height, width, thickness, aspectRatio, watch()
-*/
+// - Single Inheritance: A class can inherit from only one superclass.
+//   Example: class MobilePhone extends Electronics
 
-void main() {
-  MobilePhones mobilePhones = MobilePhones(); //Object created
-  mobilePhones.height = 70;
-  mobilePhones.width = 40;
-  mobilePhones.thickness = 10;
-  mobilePhones.watch();
-  mobilePhones.printHeight();
-  mobilePhones.printWidth();
-  mobilePhones.printThickness();
-  mobilePhones.playGames();
-  mobilePhones.callContact();
+// - Hierarchical Inheritance: When one class is inherited by many subclasses.
+//   Example: class MobilePhone extends Electronics, class Television extends Electronics
 
-  Mrdct mrdct = new Mrdct(); //Oject created
-  mrdct.height = 7;
-  mrdct.printHeight();
-  mrdct.message();
-}
+// - Multilevel Inheritance: When a class inherits from a class that itself inherits from another class.
+//   Example: class SmartPhone extends MobilePhone, class MobilePhone extends Electronics
 
+// This is the parent class.
 class Electronics {
   double height = 30;
   double width = 15;
@@ -48,20 +27,20 @@ class Electronics {
   }
 
   void printHeight() {
-    print("Height of Item = \$height");
+    print("Height of Item = $height");
   }
 
   void printWidth() {
-    print("Width of Item = \$width");
+    print("Width of Item = $width");
   }
 
   void printThickness() {
-    print("Thickness of Item = \$thickness");
+    print("Thickness of Item = $thickness");
   }
 }
 
+// This is a child class that inherits from the Electronics class.
 class MobilePhones extends Electronics {
-  // This is a single hierarchirial interitance
   void playGames() {
     print("Play games on mobile phones");
   }
@@ -71,8 +50,31 @@ class MobilePhones extends Electronics {
   }
 }
 
+// This is another child class that inherits from the Electronics class.
 class Mrdct extends Electronics {
   void message() {
     print("This message is from Mr.DCT showing he has understood inheritance");
   }
+}
+
+void main() {
+  // Creating an object of the MobilePhones class.
+  MobilePhones mobilePhones = MobilePhones();
+  mobilePhones.height = 70;
+  mobilePhones.width = 40;
+  mobilePhones.thickness = 10;
+  mobilePhones.watch();
+  mobilePhones.printHeight();
+  mobilePhones.printWidth();
+  mobilePhones.printThickness();
+  mobilePhones.playGames();
+  mobilePhones.callContact();
+
+  print("\n");
+
+  // Creating an object of the Mrdct class.
+  Mrdct mrdct = new Mrdct();
+  mrdct.height = 7;
+  mrdct.printHeight();
+  mrdct.message();
 }

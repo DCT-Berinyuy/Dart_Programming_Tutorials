@@ -1,7 +1,8 @@
-
 // ###___ Super Keyword & Constructors in Inheritance ___###
-//We use the super keyword in constructors with parameters
-//Parent class constructors are called first before the child
+
+// The `super` keyword is used to refer to the parent class.
+// It can be used to call the parent class's constructor or methods.
+// Parent class constructors are called first before the child class's constructor.
 
 class Electronics1 {
   // Super Class
@@ -15,19 +16,22 @@ class Electronics1 {
 
 class MobilePhones1 extends Electronics1 {
   // Sub class
+  // The `super(brand)` calls the parent class's constructor.
   MobilePhones1(String model, String brand) : super(brand) {
     print("This is mobile phone constructor - \$model");
   }
 }
 
 // ###___ Method Overriding ___###
+
+// Method overriding is a feature that allows a subclass to provide a specific implementation of a method that is already provided by its superclass.
+
 class Electronics2 { // Parent Class
   double height = 57;
   double width = 25;
   double thickness = 5;
 
   void watch() {
-    // Sub Class
     print("Electronics item is being watched.");
   }
 }
@@ -38,13 +42,12 @@ class MobilePhones2 extends Electronics2 {
     print("Playing games on mobile phones");
   }
 
+  // This method overrides the `watch` method of the parent class.
+  @override
   void watch() {
-    // Sub Class
     print("MobilePhones item is being watched.");
-    super.watch(); //Permits me to print both the parent & child watch function
-    //So this override my parent class function
-    //Imagin it this way, Your parents are right handed but you prefer writing with your
-    //left hand. That means you have overwriten your parents property
+    // The `super.watch()` calls the `watch` method of the parent class.
+    super.watch();
   }
 }
 
@@ -56,6 +59,4 @@ void main() {
   print("\nMethod Overriding:");
   MobilePhones2 mobilePhones2 = new MobilePhones2();
   mobilePhones2.watch();
-  //The object mobilePhones gives preference or priority to its class than the parent class
-  // If the child and parent class have the same property or function.
 }

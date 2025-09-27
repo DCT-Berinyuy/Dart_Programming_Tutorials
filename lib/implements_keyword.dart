@@ -1,10 +1,11 @@
+// ###___ The `implements` Keyword ___###
 
-// ###___ Difference Between extends and implements keywords ___###
+// The `implements` keyword is used to implement an interface.
+// An interface is a contract that defines a set of methods that a class must implement.
+// A class can implement multiple interfaces.
+// When a class implements an interface, it must provide an implementation for all the methods of that interface.
 
-// extends don't override the method/function but implements do
-// So implements is kind of similar to abstracting.
-
-//Parent class
+// This is a class that will be used as an interface.
 class Animal {
   void walking() {
     print("Walking");
@@ -15,29 +16,29 @@ class Animal {
   }
 }
 
-//Parent class
+// This is another class that will be used as an interface.
 class Mammal {
   void reproduction() {}
 }
 
-//Child class
+// This class implements the Animal and Mammal interfaces.
+// It must provide an implementation for all the methods of both interfaces.
 class Cow implements Animal, Mammal {
+  @override
   void walking() {
     print("Walking cow");
   }
 
+  @override
   void eating() {
     print("Eating cow");
   }
 
+  @override
   void reproduction() {
     print("Cow is reproducing");
   }
 }
-// 1. You have to overrid the methods. No choice
-// 2. If you have two parents for a child, then you use implements
-// because you can't extends two parents in a child class
-// 3. In conclution, you can have multiple parents in implements.
 
 void main() {
   Cow cow = Cow();
@@ -45,3 +46,9 @@ void main() {
   cow.walking();
   cow.reproduction();
 }
+
+// ###___ Key Differences Between `extends` and `implements` ___###
+
+// 1. A class can extend only one class, but it can implement multiple interfaces.
+// 2. When a class extends another class, it inherits the implementation of the superclass's methods.
+//    When a class implements an interface, it must provide its own implementation for all the methods of the interface.
