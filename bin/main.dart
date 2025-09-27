@@ -11,6 +11,7 @@ import '../lib/abstract_classes.dart' as abstract_classes;
 import '../lib/implements_keyword.dart' as implements_keyword;
 import '../lib/mixins.dart' as mixins;
 import '../lib/asynchronous_programming.dart' as asynchronous_programming;
+import '../lib/error_handling.dart' as error_handling;
 
 void main() {
   print('--- Running variables_and_data_types.dart ---');
@@ -39,4 +40,6 @@ void main() {
   mixins.main();
   print('\n--- Running asynchronous_programming.dart ---');
   asynchronous_programming.main();
+  print('\n--- Running error_handling.dart ---');
+  error_handling.main();
 }
