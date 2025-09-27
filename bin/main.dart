@@ -1,4 +1,3 @@
-
 import '../lib/variables_and_data_types.dart' as variables_and_data_types;
 import '../lib/final_and_const.dart' as final_and_const;
 import '../lib/control_flow.dart' as control_flow;
@@ -11,6 +10,7 @@ import '../lib/method_overriding.dart' as method_overriding;
 import '../lib/abstract_classes.dart' as abstract_classes;
 import '../lib/implements_keyword.dart' as implements_keyword;
 import '../lib/mixins.dart' as mixins;
+import '../lib/asynchronous_programming.dart' as asynchronous_programming;
 
 void main() {
   print('--- Running variables_and_data_types.dart ---');
@@ -37,4 +37,6 @@ void main() {
   implements_keyword.main();
   print('\n--- Running mixins.dart ---');
   mixins.main();
+  print('\n--- Running asynchronous_programming.dart ---');
+  asynchronous_programming.main();
 }
