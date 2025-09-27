@@ -14,8 +14,9 @@ import '../lib/asynchronous_programming.dart' as asynchronous_programming;
 import '../lib/error_handling.dart' as error_handling;
 import '../lib/generics.dart' as generics;
 import '../lib/callable_classes.dart' as callable_classes;
+import '../lib/isolates.dart' as isolates;
 
-void main() {
+void main() async {
   print('--- Running variables_and_data_types.dart ---');
   variables_and_data_types.main();
   print('\n--- Running final_and_const.dart ---');
@@ -41,11 +42,13 @@ void main() {
   print('\n--- Running mixins.dart ---');
   mixins.main();
   print('\n--- Running asynchronous_programming.dart ---');
-  asynchronous_programming.main();
+  await asynchronous_programming.main(); // Await the async main function
   print('\n--- Running error_handling.dart ---');
   error_handling.main();
   print('\n--- Running generics.dart ---');
   generics.main();
   print('\n--- Running callable_classes.dart ---');
   callable_classes.main();
+  print('\n--- Running isolates.dart ---');
+  await isolates.main(); // Await the async main function
 }
