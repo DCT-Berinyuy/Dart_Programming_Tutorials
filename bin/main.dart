@@ -12,6 +12,7 @@ import '../lib/implements_keyword.dart' as implements_keyword;
 import '../lib/mixins.dart' as mixins;
 import '../lib/asynchronous_programming.dart' as asynchronous_programming;
 import '../lib/error_handling.dart' as error_handling;
+import '../lib/generics.dart' as generics;
 
 void main() {
   print('--- Running variables_and_data_types.dart ---');
@@ -42,4 +43,6 @@ void main() {
   asynchronous_programming.main();
   print('\n--- Running error_handling.dart ---');
   error_handling.main();
+  print('\n--- Running generics.dart ---');
+  generics.main();
 }
