@@ -1,0 +1,40 @@
+
+import '../lib/variables_and_data_types.dart' as variables_and_data_types;
+import '../lib/final_and_const.dart' as final_and_const;
+import '../lib/control_flow.dart' as control_flow;
+import '../lib/functions.dart' as functions;
+import '../lib/classes_and_objects.dart' as classes_and_objects;
+import '../lib/constructors.dart' as constructors;
+import '../lib/getters_and_setters.dart' as getters_and_setters;
+import '../lib/inheritance.dart' as inheritance;
+import '../lib/method_overriding.dart' as method_overriding;
+import '../lib/abstract_classes.dart' as abstract_classes;
+import '../lib/implements_keyword.dart' as implements_keyword;
+import '../lib/mixins.dart' as mixins;
+
+void main() {
+  print('--- Running variables_and_data_types.dart ---');
+  variables_and_data_types.main();
+  print('\n--- Running final_and_const.dart ---');
+  final_and_const.main();
+  print('\n--- Running control_flow.dart ---');
+  control_flow.main();
+  print('\n--- Running functions.dart ---');
+  functions.main();
+  print('\n--- Running classes_and_objects.dart ---');
+  classes_and_objects.main();
+  print('\n--- Running constructors.dart ---');
+  constructors.main();
+  print('\n--- Running getters_and_setters.dart ---');
+  getters_and_setters.main();
+  print('\n--- Running inheritance.dart ---');
+  inheritance.main();
+  print('\n--- Running method_overriding.dart ---');
+  method_overriding.main();
+  print('\n--- Running abstract_classes.dart ---');
+  abstract_classes.main();
+  print('\n--- Running implements_keyword.dart ---');
+  implements_keyword.main();
+  print('\n--- Running mixins.dart ---');
+  mixins.main();
+}
