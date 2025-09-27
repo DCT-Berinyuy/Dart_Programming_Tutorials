@@ -13,6 +13,7 @@ import '../lib/mixins.dart' as mixins;
 import '../lib/asynchronous_programming.dart' as asynchronous_programming;
 import '../lib/error_handling.dart' as error_handling;
 import '../lib/generics.dart' as generics;
+import '../lib/callable_classes.dart' as callable_classes;
 
 void main() {
   print('--- Running variables_and_data_types.dart ---');
@@ -45,4 +46,6 @@ void main() {
   error_handling.main();
   print('\n--- Running generics.dart ---');
   generics.main();
+  print('\n--- Running callable_classes.dart ---');
+  callable_classes.main();
 }

@@ -23,3 +23,4 @@ Dart is a client-optimized programming language for apps on multiple platforms. 
 13. [Asynchronous Programming](lib/asynchronous_programming.dart)
 14. [Error Handling and Exceptions](lib/error_handling.dart)
 15. [Generics](lib/generics.dart)
+16. [Callable Classes](lib/callable_classes.dart)
