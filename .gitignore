@@ -1,0 +1,10 @@
+# Dart & Flutter
+.dart_tool/
+.packages
+build/
+
+# IDE-specific
+.idea/
+.vscode/
+*.iml
+*.userprefs
