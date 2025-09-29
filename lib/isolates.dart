@@ -16,7 +16,7 @@ void heavyComputation(SendPort sendPort) {
   sendPort.send(sum);
 }
 
-void main() async {
+Future<void> main() async {
   print("Main isolate: Starting heavy computation...");
 
   // Create a ReceivePort to receive messages from the new isolate.
